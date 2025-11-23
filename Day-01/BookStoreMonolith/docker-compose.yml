@@ -1,0 +1,86 @@
+﻿version: '3.8'
+
+services:
+  user-service:
+    build:
+      context: .
+      dockerfile: UserService/Dockerfile
+    ports:
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sql-server;Database=UserService;User Id=sa;Password=YourPassword123!;TrustServerCertificate=true;
+    depends_on:
+      - sql-server
+    networks:
+      - bookstore-network
+
+  product-service:
+    build:
+      context: .
+      dockerfile: ProductService/Dockerfile
+    ports:
+      - "5002:5002"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sql-server;Database=ProductService;User Id=sa;Password=YourPassword123!;TrustServerCertificate=true;
+    depends_on:
+      - sql-server
+    networks:
+      - bookstore-network
+
+  order-service:
+    build:
+      context: .
+      dockerfile: OrderService/Dockerfile
+    ports:
+      - "5003:5003"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sql-server;Database=OrderService;User Id=sa;Password=YourPassword123!;TrustServerCertificate=true;
+    depends_on:
+      - sql-server
+    networks:
+      - bookstore-network
+
+  payment-service:
+    build:
+      context: .
+      dockerfile: PaymentService/Dockerfile
+    ports:
+      - "5004:5004"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sql-server;Database=PaymentService;User Id=sa;Password=YourPassword123!;TrustServerCertificate=true;
+    depends_on:
+      - sql-server
+    networks:
+      - bookstore-network
+
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "YourPassword123!"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql-data:/var/opt/mssql
+    networks:
+      - bookstore-network
+
+  # Optional: Redis untuk caching
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - bookstore-network
+
+volumes:
+  sql-data:
+
+networks:
+  bookstore-network:
+    driver: bridge
