@@ -45,6 +45,8 @@ services:
       context: .
       dockerfile: src/services/UserService/Dockerfile
     container_name: service-discovery-userservice
+    ports:
+      - "5003:80"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - Consul__Url=http://consul:8500
@@ -53,6 +55,36 @@ services:
       - consul
     networks:
       - service-discovery-network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+  
+  inventoryservice:
+    build:
+      context: .
+      dockerfile: src/services/InventoryService/Dockerfile
+    container_name: service-discovery-inventoryservice
+    ports:
+      - "5004:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Consul__Url=http://consul:8500
+      - Service__Port=80
+    depends_on:
+      - consul
+    networks:
+      - service-discovery-network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
 
 networks:
   service-discovery-network:
