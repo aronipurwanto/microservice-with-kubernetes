@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/BookStoreMonolith/UserService/UserService.csproj": {}
+    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/UserService/UserService.csproj": {}
   },
   "projects": {
-    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/BookStoreMonolith/SharedModels/SharedModels.csproj": {
+    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/SharedModels/SharedModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/BookStoreMonolith/SharedModels/SharedModels.csproj",
+        "projectUniqueName": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/SharedModels/SharedModels.csproj",
         "projectName": "SharedModels",
-        "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/BookStoreMonolith/SharedModels/SharedModels.csproj",
+        "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/SharedModels/SharedModels.csproj",
         "packagesPath": "/Users/ahmadroni/.nuget/packages/",
-        "outputPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/BookStoreMonolith/SharedModels/obj/",
+        "outputPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/SharedModels/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ahmadroni/.nuget/NuGet/NuGet.Config"
@@ -43,6 +43,20 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,14 +77,14 @@
         }
       }
     },
-    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/BookStoreMonolith/UserService/UserService.csproj": {
+    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/UserService/UserService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/BookStoreMonolith/UserService/UserService.csproj",
+        "projectUniqueName": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/UserService/UserService.csproj",
         "projectName": "UserService",
-        "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/BookStoreMonolith/UserService/UserService.csproj",
+        "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/UserService/UserService.csproj",
         "packagesPath": "/Users/ahmadroni/.nuget/packages/",
-        "outputPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/BookStoreMonolith/UserService/obj/",
+        "outputPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/UserService/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ahmadroni/.nuget/NuGet/NuGet.Config"
@@ -85,8 +99,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/BookStoreMonolith/SharedModels/SharedModels.csproj": {
-                "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/BookStoreMonolith/SharedModels/SharedModels.csproj"
+              "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/SharedModels/SharedModels.csproj": {
+                "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/SharedModels/SharedModels.csproj"
               }
             }
           }
@@ -107,6 +121,10 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "AspNetCore.HealthChecks.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.0, )"
@@ -114,6 +132,18 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[10.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[10.0.1, )"
             }
           },
           "imports": [
