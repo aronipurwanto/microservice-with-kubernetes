@@ -945,6 +945,21 @@
         "build": {
           "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
+      },
+      "SharedModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0",
+          "Swashbuckle.AspNetCore.SwaggerUI": "10.0.1"
+        },
+        "compile": {
+          "bin/placeholder/SharedModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SharedModels.dll": {}
+        }
       }
     }
   },
@@ -2315,6 +2330,11 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "SharedModels/1.0.0": {
+      "type": "project",
+      "path": "../SharedModels/SharedModels.csproj",
+      "msbuildProject": "../SharedModels/SharedModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2323,6 +2343,7 @@
       "Microsoft.AspNetCore.OpenApi >= 10.0.0",
       "Microsoft.EntityFrameworkCore >= 10.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.0",
+      "SharedModels >= 1.0.0",
       "Swashbuckle.AspNetCore.SwaggerGen >= 10.0.1",
       "Swashbuckle.AspNetCore.SwaggerUI >= 10.0.1"
     ]
@@ -2351,7 +2372,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/SharedModels/SharedModels.csproj": {
+              "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolith/SharedModels/SharedModels.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
