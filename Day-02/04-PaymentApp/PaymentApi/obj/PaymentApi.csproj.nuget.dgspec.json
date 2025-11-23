@@ -1,0 +1,270 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentApi/PaymentApi.csproj": {}
+  },
+  "projects": {
+    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentApi/PaymentApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentApi/PaymentApi.csproj",
+        "projectName": "PaymentApi",
+        "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentApi/PaymentApi.csproj",
+        "packagesPath": "/Users/ahmadroni/.nuget/packages/",
+        "outputPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ahmadroni/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net10.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net10.0": {
+            "targetAlias": "net10.0",
+            "projectReferences": {
+              "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentCore/PaymentCore.csproj": {
+                "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentCore/PaymentCore.csproj"
+              },
+              "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentData/PaymentData.csproj": {
+                "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentData/PaymentData.csproj"
+              },
+              "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentModels/PaymentModels.csproj": {
+                "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentModels/PaymentModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net10.0": {
+          "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentCore/PaymentCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentCore/PaymentCore.csproj",
+        "projectName": "PaymentCore",
+        "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentCore/PaymentCore.csproj",
+        "packagesPath": "/Users/ahmadroni/.nuget/packages/",
+        "outputPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentCore/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ahmadroni/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net10.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net10.0": {
+            "targetAlias": "net10.0",
+            "projectReferences": {
+              "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentData/PaymentData.csproj": {
+                "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentData/PaymentData.csproj"
+              },
+              "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentModels/PaymentModels.csproj": {
+                "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentModels/PaymentModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net10.0": {
+          "targetAlias": "net10.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentData/PaymentData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentData/PaymentData.csproj",
+        "projectName": "PaymentData",
+        "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentData/PaymentData.csproj",
+        "packagesPath": "/Users/ahmadroni/.nuget/packages/",
+        "outputPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentData/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ahmadroni/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net10.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net10.0": {
+            "targetAlias": "net10.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net10.0": {
+          "targetAlias": "net10.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentModels/PaymentModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentModels/PaymentModels.csproj",
+        "projectName": "PaymentModels",
+        "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentModels/PaymentModels.csproj",
+        "packagesPath": "/Users/ahmadroni/.nuget/packages/",
+        "outputPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-02/04-PaymentApp/PaymentModels/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ahmadroni/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net10.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net10.0": {
+            "targetAlias": "net10.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net10.0": {
+          "targetAlias": "net10.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
