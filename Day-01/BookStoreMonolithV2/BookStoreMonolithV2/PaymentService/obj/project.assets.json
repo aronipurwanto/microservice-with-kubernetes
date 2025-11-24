@@ -1,0 +1,101 @@
+{
+  "version": 3,
+  "targets": {
+    "net10.0": {
+      "SharedModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/SharedModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SharedModels.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "SharedModels/1.0.0": {
+      "type": "project",
+      "path": "../SharedModels/SharedModels.csproj",
+      "msbuildProject": "../SharedModels/SharedModels.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net10.0": [
+      "SharedModels >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/ahmadroni/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolithV2/BookStoreMonolithV2/PaymentService/PaymentService.csproj",
+      "projectName": "PaymentService",
+      "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolithV2/BookStoreMonolithV2/PaymentService/PaymentService.csproj",
+      "packagesPath": "/Users/ahmadroni/.nuget/packages/",
+      "outputPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolithV2/BookStoreMonolithV2/PaymentService/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/ahmadroni/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net10.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net10.0": {
+          "targetAlias": "net10.0",
+          "projectReferences": {
+            "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolithV2/BookStoreMonolithV2/SharedModels/SharedModels.csproj": {
+              "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-01/BookStoreMonolithV2/BookStoreMonolithV2/SharedModels/SharedModels.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "10.0.100"
+    },
+    "frameworks": {
+      "net10.0": {
+        "targetAlias": "net10.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
