@@ -1,0 +1,13 @@
+# service-canary.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: weather-service-canary
+  namespace: deployment-lab
+spec:
+  selector:
+    app: weather-api-stable  # Mainly stable, but canary shares same labels
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP

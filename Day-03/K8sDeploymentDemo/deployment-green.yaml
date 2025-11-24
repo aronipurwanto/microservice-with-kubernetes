@@ -1,0 +1,28 @@
+# deployment-green.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-api-green
+  namespace: deployment-lab
+  labels:
+    app: weather-api-green
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: weather-api-green
+  template:
+    metadata:
+      labels:
+        app: weather-api-green
+        version: "2.0.0"
+    spec:
+      containers:
+        - name: weather-api
+          image: k8s-deployment-demo:2.0.0
+          ports:
+            - containerPort: 80
+          env:
+            - name: APP_VERSION
+              value: "2.0.0-green"
+          # ... same as base deployment

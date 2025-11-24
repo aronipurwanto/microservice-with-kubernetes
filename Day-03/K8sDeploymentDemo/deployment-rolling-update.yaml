@@ -1,0 +1,53 @@
+# deployment-rolling-update.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-api-rolling
+  namespace: deployment-lab
+  labels:
+    app: weather-api-rolling
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: weather-api-rolling
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: weather-api-rolling
+        version: "2.0.0"
+    spec:
+      containers:
+        - name: weather-api
+          image: k8s-deployment-demo:2.0.0
+          ports:
+            - containerPort: 80
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Development
+            - name: APP_VERSION
+              value: "2.0.0"
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5

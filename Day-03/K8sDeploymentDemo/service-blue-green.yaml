@@ -1,0 +1,13 @@
+# service-blue-green.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: weather-service-bg
+  namespace: deployment-lab
+spec:
+  selector:
+    app: weather-api-blue  # Initially pointing to blue
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP

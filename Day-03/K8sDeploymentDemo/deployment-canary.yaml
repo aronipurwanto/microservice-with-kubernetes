@@ -1,0 +1,27 @@
+# deployment-canary.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-api-canary
+  namespace: deployment-lab
+  labels:
+    app: weather-api-canary
+spec:
+  replicas: 1  # Only 1 replica for canary
+  selector:
+    matchLabels:
+      app: weather-api-canary
+  template:
+    metadata:
+      labels:
+        app: weather-api-canary
+        version: "2.0.0"
+    spec:
+      containers:
+        - name: weather-api
+          image: k8s-deployment-demo:2.0.0
+          ports:
+            - containerPort: 80
+          env:
+            - name: APP_VERSION
+              value: "2.0.0-canary"

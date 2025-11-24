@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-03/K8sDeploymentDemo/K8sDeploymentDemo.csproj": {}
+  },
+  "projects": {
+    "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-03/K8sDeploymentDemo/K8sDeploymentDemo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-03/K8sDeploymentDemo/K8sDeploymentDemo.csproj",
+        "projectName": "K8sDeploymentDemo",
+        "projectPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-03/K8sDeploymentDemo/K8sDeploymentDemo.csproj",
+        "packagesPath": "/Users/ahmadroni/.nuget/packages/",
+        "outputPath": "/Users/ahmadroni/Training/Kubernetes-2025-11/lab/Day-03/K8sDeploymentDemo/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ahmadroni/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net10.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net10.0": {
+            "targetAlias": "net10.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net10.0": {
+          "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

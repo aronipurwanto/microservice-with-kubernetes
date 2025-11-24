@@ -1,0 +1,27 @@
+# deployment-stable.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-api-stable
+  namespace: deployment-lab
+  labels:
+    app: weather-api-stable
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: weather-api-stable
+  template:
+    metadata:
+      labels:
+        app: weather-api-stable
+        version: "1.0.0"
+    spec:
+      containers:
+        - name: weather-api
+          image: k8s-deployment-demo:1.0.0
+          ports:
+            - containerPort: 80
+          env:
+            - name: APP_VERSION
+              value: "1.0.0-stable"
