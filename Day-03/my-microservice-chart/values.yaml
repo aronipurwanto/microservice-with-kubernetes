@@ -1,0 +1,31 @@
+apiVersion: v2                    # Helm chart API version
+name: my-microservice             # Nama chart (wajib)
+description: A Helm chart for Kubernetes
+
+type: application                 # application | library
+
+version: 1.2.3                    # Versi chart (SemVer 2)
+appVersion: "v2.1.0"             # Versi aplikasi yang di-deploy
+
+dependencies:                    # Chart dependencies
+  - name: redis
+    version: "14.0.0"
+    repository: "https://charts.bitnami.com/bitnami"
+    condition: redis.enabled
+
+maintainers:
+  - name: Your Name
+    email: your@email.com
+
+keywords:
+  - microservice
+  - api
+  - rest
+
+sources:
+  - https://github.com/company/my-microservice
+
+icon: https://example.com/icon.png
+
+annotations:
+  category: Backend

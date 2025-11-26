@@ -1,0 +1,30 @@
+replicaCount: 1
+
+image:
+  repository: my-registry.com/company/my-microservice
+  tag: "dev-latest"
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
+
+env:
+  - name: ENVIRONMENT
+    value: "development"
+  - name: LOG_LEVEL
+    value: "DEBUG"
+
+ingress:
+  enabled: true
+  hosts:
+    - host: myapp-dev.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+
+autoscaling:
+  enabled: false

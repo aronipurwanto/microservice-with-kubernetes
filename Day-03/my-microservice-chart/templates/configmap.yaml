@@ -1,0 +1,23 @@
+# templates/configmap.yaml
+  {{- if .Values.configMap.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configMap.name | default (printf "%s-config" (include "my-microservice.fullname" .)) }}
+data:
+  application.yaml: |
+    server:
+      port: {{ .Values.service.port }}
+    logging:
+      level: {{ .Values.env | pluck "LOG_LEVEL" | first | default "INFO" }}
+      
+      {{- range .Values.env }}
+      {{ .name }}: {{ .value | quote }}
+      {{- end }}
+    
+    # Dynamic configuration based on values
+      {{- if .Values.database.enabled }}
+    database:
+      url: {{ printf "jdbc:postgresql://%s:%s/%s" .Values.database.host .Values.database.port .Values.database.name }}
+      {{- end }}
+  {{- end }}
